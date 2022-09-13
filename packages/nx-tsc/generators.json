@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "nx-tsc",
+  "version": "0.0.1",
+  "generators": {
+    "nx-tsc": {
+      "factory": "./src/generators/nx-tsc/generator",
+      "schema": "./src/generators/nx-tsc/schema.json",
+      "description": "nx-tsc generator"
+    }
+  }
+}

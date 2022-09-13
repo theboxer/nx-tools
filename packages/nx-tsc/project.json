@@ -1,0 +1,60 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nx-tsc/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nx-tsc",
+        "main": "packages/nx-tsc/src/index.ts",
+        "tsConfig": "packages/nx-tsc/tsconfig.lib.json",
+        "assets": [
+          "packages/nx-tsc/*.md",
+          {
+            "input": "./packages/nx-tsc/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/nx-tsc/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/nx-tsc",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/nx-tsc",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/nx-tsc/**/*.ts",
+          "packages/nx-tsc/generators.json",
+          "packages/nx-tsc/executors.json",
+          "packages/nx-tsc/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/nx-tsc"],
+      "options": {
+        "jestConfig": "packages/nx-tsc/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
