@@ -1,5 +1,5 @@
 {
-  "name": "nx-tools",
+  "name": "@theboxer/nx-tools",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
   "private": true,
   "devDependencies": {
     "@nrwl/cli": "14.7.5",
-    "@nrwl/devkit": "14.7.5",
+    "@nrwl/devkit": "^14.7.5",
     "@nrwl/eslint-plugin-nx": "14.7.5",
     "@nrwl/jest": "14.7.5",
     "@nrwl/js": "14.7.5",

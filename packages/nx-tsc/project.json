@@ -24,11 +24,6 @@
           },
           {
             "input": "./packages/nx-tsc",
-            "glob": "generators.json",
-            "output": "."
-          },
-          {
-            "input": "./packages/nx-tsc",
             "glob": "executors.json",
             "output": "."
           }
@@ -41,18 +36,9 @@
       "options": {
         "lintFilePatterns": [
           "packages/nx-tsc/**/*.ts",
-          "packages/nx-tsc/generators.json",
           "packages/nx-tsc/executors.json",
           "packages/nx-tsc/package.json"
         ]
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/nx-tsc"],
-      "options": {
-        "jestConfig": "packages/nx-tsc/jest.config.ts",
-        "passWithNoTests": true
       }
     }
   },

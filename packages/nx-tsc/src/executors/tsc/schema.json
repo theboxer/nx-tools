@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Tsc executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "tsConfig": {
+      "type": "string",
+      "description": "Path to the tsconfig"
+    },
+    "tsBuildInfoFile": {
+      "type": "string",
+      "description": "Path to the tsBuildInfoFile"
+    }
+  },
+  "required": []
+}

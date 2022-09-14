@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/schema",
   "executors": {
-    "build": {
-      "implementation": "./src/executors/build/executor",
-      "schema": "./src/executors/build/schema.json",
-      "description": "build executor"
+    "tsc": {
+      "implementation": "./src/executors/tsc/executor",
+      "schema": "./src/executors/tsc/schema.json",
+      "description": "tsc executor"
     }
   }
 }

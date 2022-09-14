@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "nx-tools",
+  "npmScope": "@theboxer",
   "affected": {
     "defaultBase": "main"
   },
@@ -24,7 +24,6 @@
     }
   },
   "workspaceLayout": {
-    "appsDir": "e2e",
     "libsDir": "packages"
   }
 }
